@@ -1,0 +1,56 @@
+$d_grey: #212121;
+$l_grey: #EEEEEE;
+$d_green: #1B5E20;
+$l_green: #8BC34A;
+$l_purple: #7E57C2;
+$d_purple: #311B92;
+$l_yellow: #FFD600;
+$d_yellow: #FF6F00;
+$l_red: #F44336;
+$d_red: #B71C1C;
+
+@mixin margin($v, $h) {
+		margin: $v $h;
+}
+
+@mixin padding($v, $h) {
+	padding: $v $h;
+}
+
+.interface {
+	background: $l_grey;
+	@include padding(10, 10);
+	@include margin(10, 10);
+}
+
+.green {
+	@extend .interface;
+	color: $l_green ; 
+	&:hover {
+		background: $d_green;
+	}
+}
+
+.purple {
+	@extend .interface;
+	color: $l_purple ; 
+	&:hover {
+		background: $d_purple;
+	}
+}
+
+.yellow {
+	@extend .interface;
+	color: $l_yellow ; 
+	&:hover {
+		background: $d_yellow;
+	}
+}
+
+.red {
+	@extend .interface;
+	color: $l_red; 
+	&:hover {
+		background: $d_red;
+	}
+}
